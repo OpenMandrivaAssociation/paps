@@ -30,7 +30,7 @@ outline curves through the pango ft2 backend.
 
 %prep
 %setup -q
-autoreconf --force --install
+#autoreconf --force --install
 
 %build
 %configure2_5x
@@ -40,24 +40,18 @@ make
 rm -rf %{buildroot}
 %makeinstall_std
 
-rm -rf ./html
-mv %{buildroot}%{_datadir}/doc/libpaps/html ./
-rmdir -p %{buildroot}%{_datadir}/doc/libpaps || true
-# doxygen generated something funny
-rm -f html/docs__*
-
 %clean
 rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%doc AUTHORS NEWS README
+%doc AUTHORS NEWS README doxygen-doc/html/*
 %{_bindir}/*
 %{_mandir}/man1/%{name}.*.bz2
 
 
 %files -n %{staticdevelname}
 %defattr(-,root,root)
-%doc ChangeLog html
+%doc ChangeLog
 %{_includedir}/*
 %{_libdir}/*.a
