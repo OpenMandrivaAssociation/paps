@@ -47,7 +47,7 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc AUTHORS NEWS README doxygen-doc/html/*
 %{_bindir}/*
-%{_mandir}/man1/%{name}.*.bz2
+%{_mandir}/man1/%{name}.*
 
 
 %files -n %{staticdevelname}
