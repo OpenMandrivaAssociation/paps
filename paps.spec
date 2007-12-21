@@ -10,6 +10,7 @@ License:	LGPL
 Group:		Publishing
 URL:		http://paps.sourceforge.net/
 Source0:	http://paps.sourceforge.net/%{name}-%{version}.tar.bz2
+Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	pango-devel
 BuildRequires:  doxygen
 
