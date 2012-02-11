@@ -1,5 +1,5 @@
 %define	version	0.6.8
-%define release	%mkrel 4
+%define release	%mkrel 5
 %define staticdevelname %mklibname -s -d paps
 
 Summary:	Text to Postscript Converter Using Pango
